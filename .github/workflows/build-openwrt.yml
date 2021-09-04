@@ -60,7 +60,9 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        patch -p1 < ~/work/AX6/AX6/openwrt/files/lede-NSS-MG-5.4.142.patch
+        cd openwrt
+        weget https://dsm.040623.xyz:18443/sharing/UXgyecGdW
+        patch -p1 < lede-NSS-MG-5.4.142.patch
 
     - name: Load custom feeds
       run: |
