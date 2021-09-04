@@ -61,7 +61,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
-        weget https://dsm.040623.xyz:18443/sharing/UXgyecGdW
+        wget https://dsm.040623.xyz:18443/sharing/UXgyecGdW
         patch -p1 < lede-NSS-MG-5.4.142.patch
 
     - name: Load custom feeds
